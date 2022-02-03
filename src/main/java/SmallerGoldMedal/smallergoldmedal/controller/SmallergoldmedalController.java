@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.RestController;
 import SmallerGoldMedal.smallergoldmedal.repositories.CountryRepository;
 import SmallerGoldMedal.smallergoldmedal.repositories.GoldMedalRepository;
 
+import SmallerGoldMedal.smallergoldmedal.model.Country;
+import SmallerGoldMedal.smallergoldmedal.model.GoldMedal;
+
 @RestController
 public class SmallergoldmedalController {
 
@@ -18,9 +21,9 @@ public class SmallergoldmedalController {
         this.goldmedalRepository = goldmedalRepository;
     }
 
-    @GetMapping("/test")
-    public String test() {
-        return "Test test";
+    @GetMapping("/countries")
+    public Iterable<Country> getCountries() {
+        return countryRepository.findAll();
     }
 
 }
