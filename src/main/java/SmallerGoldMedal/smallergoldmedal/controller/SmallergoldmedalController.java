@@ -1,8 +1,12 @@
 package SmallerGoldMedal.smallergoldmedal.controller;
 
+import org.springframework.data.domain.Sort;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 
 import SmallerGoldMedal.smallergoldmedal.repositories.CountryRepository;
@@ -12,7 +16,8 @@ import SmallerGoldMedal.smallergoldmedal.model.Country;
 import SmallerGoldMedal.smallergoldmedal.model.GoldMedal;
 
 
-@RestController
+@Controller
+@RequestMapping("/")
 public class SmallergoldmedalController {
 
     private final CountryRepository countryRepository;
@@ -23,15 +28,31 @@ public class SmallergoldmedalController {
         this.goldmedalRepository = goldmedalRepository;
     }
 
-    @GetMapping("/countries")
-    public Iterable<Country> getCountries() {
-        return countryRepository.findAll();
+    // @GetMapping("/countries")
+    // public Iterable<Country> getCountries() {
+    //     return countryRepository.findAll();
+    // }
+
+    @GetMapping("/")
+    public String index() {
+       return "index";
     }
 
+
+    // Example:
+    // http://localhost:8080/countries?ascending=n&sort_by=population
     @GetMapping("/countries")
-    public String getCountries(Model model) {
-        Iterable<Country> countries = countryRepository.findAll();
-        model.addAttribute("countries", countries);
+    public String getCountries(Model model, @RequestParam(required = false) String ascending, @RequestParam(required = false) String sort_by) {
+
+        Iterable<Country> countires;
+
+        String sortby = sort_by == null ? "name" : sort_by.toLowerCase();
+        
+        Sort sort = ascending == null || ascending.toLowerCase().equals("y") ? Sort.by(sortby).ascending() : Sort.by(sortby).descending();
+
+        countires = countryRepository.findAll(sort);
+
+        model.addAttribute("countries", countires);
         
         return "countries";
     }

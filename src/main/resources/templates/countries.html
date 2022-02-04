@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Countries Table</title>
+        <meta content="text/html; charset=utf-8" />
+    </head>
+
+    <body>
+        <h2>Countries Table</h2>
+
+        <div class="container">
+            <table>
+                <tr>
+                    <th>Country Name</th>
+                    <th>Code</th>
+                    <th>GDP</th>
+                    <th>Population</th>
+                </tr>
+                <tr th:each="country : ${countries}">
+                    <td th:text="${country.name}">1</td>
+                    <td th:text="${country.code}">1</td>
+                    <td th:text="${country.gdp}">1</td>
+                    <td th:text="${country.population}">1</td>
+                </tr>
+            </table>
+        </div>   
+
+    </body>
+</html>
