@@ -42,15 +42,13 @@ public class SmallergoldmedalController {
     // Example:
     // http://localhost:8080/countries?ascending=n&sort_by=population
     @GetMapping("/countries")
-    public String getCountries(Model model, @RequestParam(required = false) String ascending, @RequestParam(required = false) String sort_by) {
+    public String getCountries(Model model, @RequestParam(required = false) String sortby, @RequestParam(required = false) String ascending) {
 
-        Iterable<Country> countires;
-
-        String sortby = sort_by == null ? "name" : sort_by.toLowerCase();
+        sortby = sortby == null ? "name" : sortby.toLowerCase();
         
         Sort sort = ascending == null || ascending.toLowerCase().equals("y") ? Sort.by(sortby).ascending() : Sort.by(sortby).descending();
 
-        countires = countryRepository.findAll(sort);
+        Iterable<Country> countires = countryRepository.findAll(sort);
 
         model.addAttribute("countries", countires);
         
