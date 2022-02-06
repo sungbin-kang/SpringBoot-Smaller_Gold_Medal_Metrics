@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Country Details</title>
+        <meta content="text/html; charset=utf-8" />
+    </head>
+
+    <body>
+        <h2>Country Details</h2>
+
+        <div class="container">
+            <table>
+                <tr>
+                    <th>Country Name</th>
+                    <th>Code</th>
+                    <th>GDP</th>
+                    <th>Population</th>
+                </tr>
+                    <td th:text="${country.name}">1</td>
+                    <td th:text="${country.code}">1</td>
+                    <td th:text="${country.gdp}">1</td>
+                    <td th:text="${country.population}">1</td>
+                </tr>
+            </table>
+        </div>   
+
+        <div class="details">
+            <ul>
+                <li>Gold Medal Count: <a th:text= "${goldMedalCount}"></a></li>
+
+                <li>Summer Events</li>
+                <ul>
+                    <li>Number of Summer Wins: <a th:text = "${numberSummerWins}"></a></li>
+                    <li>Percentage Total Summer Wins: <a th:text = "${percentageTotalSummerWins}"></a></li>
+                    <li>Year First Summer Win: <a th:text = "${yearFirstSummerWin}"></a></li>
+                </ul>
+
+                <li>Winter Events</li>
+                <ul>
+                    <li>Number of Winter Wins: <a th:text = "${numberWinterWins}"></a></li>
+                    <li>Percentage Total Winter Wins: <a th:text = "${percentageTotalWinterWins}"></a></li>
+                    <li>Year First Winter Win: <a th:text = "${yearFirstWinterWin}"></a></li>
+                </ul>
+
+                <li>Geder Events</li>
+                <ul>
+                    <li>Number of Events Won By Female Athletes: <a th:text = "${numberEventsWonByFemaleAthletes}"></a></li>
+                    <li>Number of Events Won By Male Athletes <a th:text = "${numberEventsWonByMaleAthletes}"></a></li>
+                </ul>
+
+            </ul>
+        </div>
+
+    </body>
+</html>
