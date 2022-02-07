@@ -36,17 +36,18 @@ For Window,
 **Home Page**
 
 `localhost:8080/`
+
 <img src= "https://github.com/sungbin-kang/SpringBoot-Smaller_Gold_Medal_Metrics/blob/master/resource/img/Home.png" width="500" />
 
 
 **List of Countries**
 
 `localhost:8080/countries`
-![countries](https://github.com/sungbin-kang/SpringBoot-Smaller_Gold_Medal_Metrics/blob/master/resource/img/countries.png)
+<img src= "https://github.com/sungbin-kang/SpringBoot-Smaller_Gold_Medal_Metrics/blob/master/resource/img/countries.png" width="500" />
 
 Additionally, user can specify ascending order by with values "y" or "n", and sorting values with "year", "city", "season", "name", "country", "gender", "sport", "discipline" or "event". For example: 
 `localhost:8080/countries?ascending=n&sortby=population`
-![countries?ascending=n&sortby=population](https://github.com/sungbin-kang/SpringBoot-Smaller_Gold_Medal_Metrics/blob/master/resource/img/countries%3Fascending%3Dn%26sortby%3Dpopulation.png)
+<img src= "https://github.com/sungbin-kang/SpringBoot-Smaller_Gold_Medal_Metrics/blob/master/resource/img/countries%3Fascending%3Dn%26sortby%3Dpopulation.png" width="500" />
 
 
 **Specific Country Details**
@@ -56,7 +57,7 @@ User can type specific country to see the details.
 
 For example:
 `localhost:8080/Australia`
-![Australia](https://github.com/sungbin-kang/SpringBoot-Smaller_Gold_Medal_Metrics/blob/master/resource/img/Australia.png)
+<img src= "https://github.com/sungbin-kang/SpringBoot-Smaller_Gold_Medal_Metrics/blob/master/resource/img/Australia.png" width="500" />
 
 
 **Specific Country Gold Medal Lists**
@@ -64,11 +65,11 @@ For example:
 `localhost:8080/{countryName}/medals`
 For example:
 `localhost:8080/Australia/medals`
-![Australia/medals](https://github.com/sungbin-kang/SpringBoot-Smaller_Gold_Medal_Metrics/blob/master/resource/img/Australia:medals.png)
+<img src= "https://github.com/sungbin-kang/SpringBoot-Smaller_Gold_Medal_Metrics/blob/master/resource/img/Australia:medals.png" width="500" />
 
 Additionally, user can specify 
 `localhost:8080/Australia/medals?ascending=n&sortby=event`
-![Australia/medals?ascending=n&sortby=event](https://github.com/sungbin-kang/SpringBoot-Smaller_Gold_Medal_Metrics/blob/master/resource/img/Australia:medals%3Fascending%3Dn%26sortby%3Devent.png)
+<img src= "https://github.com/sungbin-kang/SpringBoot-Smaller_Gold_Medal_Metrics/blob/master/resource/img/Australia:medals%3Fascending%3Dn%26sortby%3Devent.png" width="500" />
 
 
 ### With curl
