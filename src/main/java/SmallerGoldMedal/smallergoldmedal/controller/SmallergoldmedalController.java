@@ -112,4 +112,20 @@ public class SmallergoldmedalController {
         return "countryDetails";
     }
 
+    @GetMapping("{countryName}/medals")
+    public String getCountryMedalsList(Model model, @PathVariable String countryName, @RequestParam(required = false) String sortby, @RequestParam(required = false) String ascending) {
+
+        List<GoldMedal> medalList;
+
+        sortby = sortby == null ? "year" : sortby;
+
+        Sort sort = ascending == null || ascending.equals("y") ? Sort.by(sortby).ascending() : Sort.by(sortby).descending();
+
+        medalList = goldmedalRepository.findByCountry(countryName, sort);
+
+        model.addAttribute("medalList", medalList);
+        
+        return "countryMedalList";
+    }
+
 }

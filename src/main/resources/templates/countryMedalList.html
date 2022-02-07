@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <title>Country Medal List</title>
+      <meta content="text/html; charset=utf-8" />
+   </head>
+
+   <body>
+      <h2><a th:text="${countryName}"></a> Medal List</h2>
+
+      <div class="container">
+          <table>
+              <tr>
+                  <th>Year</th>
+                  <th>City</th>
+                  <th>Season</th>
+                  <th>Name</th>
+                  <th>Country</th>
+                  <th>Gender</th>
+                  <th>Sport</th>
+                  <th>Discipline</th>
+                  <th>Event</th>
+              </tr>
+              <tr th:each="medal : ${medalList}">
+                <td th:text="${medal.year}">year</td>
+                <td th:text="${medal.city}">city</td>
+                <td th:text="${medal.season}">season</td>
+                <td th:text="${medal.name}">name</td>
+                <td th:text="${medal.country}">country</td>
+                <td th:text="${medal.gender}">gender</td>
+                <td th:text="${medal.sport}">sport</td>
+                <td th:text="${medal.discipline}">discipline</td>
+                <td th:text="${medal.event}">event</td>
+
+              </tr>
+          </table>
+          
+        <!-- <table>
+            <tr>
+                <th>Country Name</th>
+                <th>Code</th>
+                <th>GDP</th>
+                <th>Population</th>
+            </tr>
+            <tr>
+                <td th:text="${country.name}">1</td>
+                <td th:text="${country.code}">1</td>
+                <td th:text="${country.gdp}">1</td>
+                <td th:text="${country.population}">1</td>
+
+            </tr>
+        </table> -->
+    </div>   
+
+   </body>
+
+</html>
