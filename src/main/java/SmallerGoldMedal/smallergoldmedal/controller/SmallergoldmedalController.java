@@ -28,16 +28,10 @@ public class SmallergoldmedalController {
         this.goldmedalRepository = goldmedalRepository;
     }
 
-    // @GetMapping("/countries")
-    // public Iterable<Country> getCountries() {
-    //     return countryRepository.findAll();
-    // }
-
     @GetMapping("/")
     public String index() {
        return "index";
     }
-
 
     // Example:
     // http://localhost:8080/countries?ascending=n&sortby=population

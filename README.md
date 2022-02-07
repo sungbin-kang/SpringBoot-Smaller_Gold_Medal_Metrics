@@ -19,6 +19,35 @@ This is an Olympic metrics reporting web application called Gold Medal Metrics. 
 - Java 11
 
 
+## Implementation Details
+
+### Models and Attributes
+
+- `Country`
+    - id
+    - name
+    - code
+    - gdp
+    - population
+
+- `GoldMedal`
+    - year
+    - city
+    - season
+    - name
+    - country
+    - gender
+    - sport
+    - discipline
+    - event
+
+### Controller Methods
+
+- `getCountries`
+- `getCountryDetails`
+- `getCountryMedalsList`
+
+
 ## How to Use Application
 
 ### To start application
@@ -46,7 +75,9 @@ For Window,
 
 <img src= "https://github.com/sungbin-kang/SpringBoot-Smaller_Gold_Medal_Metrics/blob/master/resource/img/countries.png" width="500" />
 
-Additionally, user can specify ascending order by with values "y" or "n", and sorting values with "year", "city", "season", "name", "country", "gender", "sport", "discipline" or "event". For example: 
+Additionally, user can specify ascending order by with values "y" or "n", and sorting values with "year", "city", "season", "name", "country", "gender", "sport", "discipline" or "event". 
+
+For example: 
 
 `localhost:8080/countries?ascending=n&sortby=population`
 <img src= "https://github.com/sungbin-kang/SpringBoot-Smaller_Gold_Medal_Metrics/blob/master/resource/img/countries%3Fascending%3Dn%26sortby%3Dpopulation.png" width="500" />
@@ -74,36 +105,10 @@ For example:
 
 <img src= "https://github.com/sungbin-kang/SpringBoot-Smaller_Gold_Medal_Metrics/blob/master/resource/img/Australia:medals.png" width="500" />
 
-Additionally, user can specify ascending order by with values "y" or "n", and sorting values with "year", "city", "season", "name", "country", "gender", "sport", "discipline" or "event". For example: 
+Additionally, user can specify ascending order by with values "y" or "n", and sorting values with "year", "city", "season", "name", "country", "gender", "sport", "discipline" or "event". 
+
+For example: 
 
 `localhost:8080/Australia/medals?ascending=n&sortby=event`
 
 <img src= "https://github.com/sungbin-kang/SpringBoot-Smaller_Gold_Medal_Metrics/blob/master/resource/img/Australia:medals%3Fascending%3Dn%26sortby%3Devent.png" width="500" />
-
-
-### With curl
-
-
-
-
-## Implementation Details
-
-Models and Attributes:
-
-- `Country`
-    - id
-    - name
-    - code
-    - gdp
-    - population
-
-- `GoldMedal`
-    - year
-    - city
-    - season
-    - name
-    - country
-    - gender
-    - sport
-    - discipline
-    - event
