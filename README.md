@@ -32,11 +32,15 @@ For Window,
 
 ### With web application
 
+
 **Home Page**
+
 `localhost:8080/`
 ![Home](https://github.com/sungbin-kang/SpringBoot-Smaller_Gold_Medal_Metrics/blob/master/resource/img/Home.png)
 
+
 **List of Countries**
+
 `localhost:8080/countries`
 ![countries](https://github.com/sungbin-kang/SpringBoot-Smaller_Gold_Medal_Metrics/blob/master/resource/img/countries.png)
 
@@ -46,6 +50,7 @@ Additionally, user can specify ascending order by with values "y" or "n", and so
 
 
 **Specific Country Details**
+
 User can type specific country to see the details.
 `localhost:8080/{countryName}`
 
@@ -53,7 +58,9 @@ For example:
 `localhost:8080/Australia`
 ![Australia](https://github.com/sungbin-kang/SpringBoot-Smaller_Gold_Medal_Metrics/blob/master/resource/img/Australia.png)
 
+
 **Specific Country Gold Medal Lists**
+
 `localhost:8080/{countryName}/medals`
 For example:
 `localhost:8080/Australia/medals`
