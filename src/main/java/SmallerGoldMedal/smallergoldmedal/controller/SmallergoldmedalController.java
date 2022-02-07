@@ -40,7 +40,7 @@ public class SmallergoldmedalController {
 
 
     // Example:
-    // http://localhost:8080/countries?ascending=n&sort_by=population
+    // http://localhost:8080/countries?ascending=n&sortby=population
     @GetMapping("/countries")
     public String getCountries(Model model, @RequestParam(required = false) String sortby, @RequestParam(required = false) String ascending) {
 
@@ -55,6 +55,8 @@ public class SmallergoldmedalController {
         return "countries";
     }
 
+    // Example:
+    // http://localhost:8080/Australia
     @GetMapping("/{countryName}")
     public String getCountryDetails(Model model, @PathVariable String countryName) {
 
@@ -112,6 +114,8 @@ public class SmallergoldmedalController {
         return "countryDetails";
     }
 
+    // Example:
+    // http://localhost:8080/Australia/medals
     @GetMapping("{countryName}/medals")
     public String getCountryMedalsList(Model model, @PathVariable String countryName, @RequestParam(required = false) String sortby, @RequestParam(required = false) String ascending) {
 
