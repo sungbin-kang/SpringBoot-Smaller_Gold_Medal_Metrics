@@ -36,7 +36,7 @@ For Window,
 **Home Page**
 
 `localhost:8080/`
-![Home]<img src= "https://github.com/sungbin-kang/SpringBoot-Smaller_Gold_Medal_Metrics/blob/master/resource/img/Home.png" width="250" />
+<img src= "https://github.com/sungbin-kang/SpringBoot-Smaller_Gold_Medal_Metrics/blob/master/resource/img/Home.png" width="500" />
 
 
 **List of Countries**
