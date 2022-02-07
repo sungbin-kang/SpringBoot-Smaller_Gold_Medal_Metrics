@@ -33,33 +33,34 @@ For Window,
 ### With web application
 
 **Home Page**
-- localhost:8080/
+`localhost:8080/`
 ![Home](https://github.com/sungbin-kang/SpringBoot-Smaller_Gold_Medal_Metrics/blob/master/resource/img/Home.png)
 
 **List of Countries**
-- localhost:8080/countries
+`localhost:8080/countries`
 ![countries](https://github.com/sungbin-kang/SpringBoot-Smaller_Gold_Medal_Metrics/blob/master/resource/img/countries.png)
 
 Additionally, user can specify ascending order by with values "y" or "n", and sorting values with "year", "city", "season", "name", "country", "gender", "sport", "discipline" or "event". For example: 
-- localhost:8080/countries?ascending=n&sortby=population
+`localhost:8080/countries?ascending=n&sortby=population`
 ![countries?ascending=n&sortby=population](https://github.com/sungbin-kang/SpringBoot-Smaller_Gold_Medal_Metrics/blob/master/resource/img/countries%3Fascending%3Dn%26sortby%3Dpopulation.png)
 
 
 **Specific Country Details**
 User can type specific country to see the details.
-- localhost:8080/{countryName}
+`localhost:8080/{countryName}`
+
 For example:
-- localhost:8080/Australia
+`localhost:8080/Australia`
 ![Australia](https://github.com/sungbin-kang/SpringBoot-Smaller_Gold_Medal_Metrics/blob/master/resource/img/Australia.png)
 
 **Specific Country Gold Medal Lists**
-- localhost:8080/{countryName}/medals
+`localhost:8080/{countryName}/medals`
 For example:
-- localhost:8080/Australia/medals
+`localhost:8080/Australia/medals`
 ![Australia/medals](https://github.com/sungbin-kang/SpringBoot-Smaller_Gold_Medal_Metrics/blob/master/resource/img/Australia:medals.png)
 
 Additionally, user can specify 
-- http://localhost:8080/Australia/medals?ascending=n&sortby=event
+`localhost:8080/Australia/medals?ascending=n&sortby=event`
 ![Australia/medals?ascending=n&sortby=event](https://github.com/sungbin-kang/SpringBoot-Smaller_Gold_Medal_Metrics/blob/master/resource/img/Australia:medals%3Fascending%3Dn%26sortby%3Devent.png)
 
 
